@@ -1,0 +1,35 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+
+      <script type = "text/javascript" language = "javascript">
+        function func(x){
+   console.log(typeof x, arguments.length);
+}
+// Context
+function scope() {
+   console.log(this, arguments.length);
+}
+
+// Scope
+var myVar = "global";     // ==> Declare a global variable
+
+function Scope( ) {
+   var myVar = "local";   // ==> Declare a local variable
+   document.write(myVar); // ==> local
+}
+// Callback
+$(document).click(function(event) {
+   console.log("clicked: " + event.target);
+});
+
+      </script>
+   </head>
+	
+   <body>
+      <div></div>
+   </body>
+</html>
